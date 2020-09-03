@@ -203,7 +203,7 @@ class Event:
     def get_week_events(self) -> str:
         reply = "一周日程："
         date = Arrow.now(tzinfo=self.timezone)
-        for i in range(7):
+        for i in range(5):
             events = self.timeline.at(date)
             events_str = "\n⨠".join(events)
             if events_str == "":
